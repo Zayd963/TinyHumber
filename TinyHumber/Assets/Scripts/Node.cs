@@ -5,21 +5,23 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public bool visited = false;
-    float globalGoal = 0;
-    float localGoal = 0;
-    Node[] connectedNodes;
-    Node parent;
-
+    public float globalGoal = 0;
+    public float localGoal = 0;
+    public Node[] connectedNodes;
+    public Node parent;
+    public Material colour;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        colour = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //if (visited)
+        //    colour.SetColor("_Color", Color.blue);
+
     }
 }
